@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PromptVault — 10,000+ AI Prompts</title>
+  <meta name="description" content="Unlock 10,000+ battle-tested prompts for ChatGPT, Midjourney, Claude, and more. New prompts added daily. Start your 7-day free trial today.">
+  <meta property="og:title" content="PromptVault — The Ultimate AI Prompt Library">
+  <meta property="og:description" content="10,000+ curated AI prompts for ChatGPT, Midjourney, Claude & more.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PromptVault — 10,000+ AI Prompts">
+  <meta name="twitter:description" content="Battle-tested prompts for every AI tool. Free trial available.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2306b6d4'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold' font-size='16'%3EAI%3C/text%3E%3C/svg%3E">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            surface: '#0f172a',
+            'surface-raised': '#1e293b',
+            primary: '#f8fafc',
+            secondary: '#94a3b8',
+            tertiary: '#64748b',
+            default: '#334155',
+            'cyan-600': '#0891b2',
+            'cyan-700': '#0e7490',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #0f172a; color: #f8fafc; }
+    .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .animate-fadeIn { animation: fadeIn 0.2s ease-out; }
+    .animate-slideUp { animation: slideUp 0.3s ease-out; }
+    .border-red-400 { border-color: #f87171 !important; }
+    input:focus { outline: none; border-color: #06b6d4 !important; box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15); }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+  </style>
+</head>
+<body class="min-h-screen bg-surface text-primary">
+
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-default" role="navigation" aria-label="Main navigation">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-bold text-xl hover:opacity-90 transition" aria-label="PromptVault home">
+        <div class="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-white text-sm" aria-hidden="true">AI</div>
+        PromptVault
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm text-tertiary">
+        <a href="#features" class="hover:text-primary transition">Features</a>
+        <a href="#pricing" class="hover:text-primary transition">Pricing</a>
+        <a href="#demo" class="hover:text-primary transition">Try Demo</a>
+        <a href="#faq" class="hover:text-primary transition">FAQ</a>
+      </div>
+      <button onclick="openCheckout('pro')" class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-cyan-500/25 transition">
+        Get Pro Access
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-24 px-6" aria-labelledby="hero-heading">
+    <div class="absolute inset-0 bg-gradient-to-br from-cyan-950/40 via-surface to-blue-950/40" aria-hidden="true"></div>
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl" aria-hidden="true"></div>
+    <div class="relative max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-1.5 text-sm text-cyan-400 mb-6">
+        <span class="w-2 h-2 bg-cyan-400 rounded-full" style="animation: pulse-dot 2s ease-in-out infinite"></span>
+        2,400+ AI prompts added this week
+      </div>
+      <h1 id="hero-heading" class="text-5xl md:text-6xl font-bold tracking-tight mb-6">
+        The Ultimate <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">AI Prompt</span> Library
+      </h1>
+      <p class="text-xl text-tertiary max-w-2xl mx-auto mb-10">
+        Unlock 10,000+ battle-tested prompts for ChatGPT, Midjourney, Claude, and more. New prompts added daily. Cancel anytime.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button onclick="openCheckout('pro')" class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-xl hover:shadow-cyan-500/20 transition transform hover:-translate-y-0.5">
+          Start 7-Day Free Trial
+        </button>
+        <button onclick="scrollToDemo()" class="bg-surface-raised border border-default text-primary font-semibold px-8 py-4 rounded-xl hover:border-cyan-500/30 transition">
+          Explore Free Prompts
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="border-y border-default bg-surface-raised py-10" aria-label="Featured in">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-wrap justify-center gap-12 items-center opacity-50 grayscale hover:grayscale-0 transition duration-500">
+        <span class="text-lg font-bold">TechCrunch</span>
+        <span class="text-lg font-bold">Product Hunt</span>
+        <span class="text-lg font-bold">Forbes</span>
+        <span class="text-lg font-bold">Wired</span>
+        <span class="text-lg font-bold">The Verge</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20 px-6 max-w-6xl mx-auto" aria-labelledby="features-heading">
+    <div class="text-center mb-16">
+      <h2 id="features-heading" class="text-3xl font-bold mb-4">Why Creators Subscribe</h2>
+      <p class="text-tertiary max-w-xl mx-auto">Stop wasting hours crafting the perfect prompt. We did the work for you.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="group bg-surface-raised border border-default rounded-2xl p-8 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/5 transition">
+        <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition" aria-hidden="true">
+          <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">10,000+ Curated Prompts</h3>
+        <p class="text-tertiary text-sm leading-relaxed">Every prompt is tested, tagged, and rated. Filter by AI model, use case, or difficulty.</p>
+      </div>
+      <div class="group bg-surface-raised border border-default rounded-2xl p-8 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/5 transition">
+        <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition" aria-hidden="true">
+          <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">One-Click Copy & Customize</h3>
+        <p class="text-tertiary text-sm leading-relaxed">Copy any prompt instantly. Use our smart variables to personalize for your brand in seconds.</p>
+      </div>
+      <div class="group bg-surface-raised border border-default rounded-2xl p-8 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/5 transition">
+        <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition" aria-hidden="true">
+          <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Weekly New Drops</h3>
+        <p class="text-tertiary text-sm leading-relaxed">Our team of prompt engineers adds fresh, trending prompts every week. Stay ahead of the curve.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-20 px-6 max-w-6xl mx-auto" aria-labelledby="how-heading">
+    <div class="text-center mb-16">
+      <h2 id="how-heading" class="text-3xl font-bold mb-4">How It Works</h2>
+      <p class="text-tertiary max-w-xl mx-auto">Get started in 60 seconds. No learning curve.</p>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="text-center">
+        <div class="w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl font-bold text-cyan-500">1</div>
+        <h3 class="font-semibold mb-2">Subscribe</h3>
+        <p class="text-tertiary text-sm">Pick a plan and start your free 7-day trial.</p>
+      </div>
+      <div class="text-center">
+        <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl font-bold text-blue-500">2</div>
+        <h3 class="font-semibold mb-2">Browse</h3>
+        <p class="text-tertiary text-sm">Filter by AI tool, category, or use case.</p>
+      </div>
+      <div class="text-center">
+        <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl font-bold text-purple-500">3</div>
+        <h3 class="font-semibold mb-2">Copy & Paste</h3>
+        <p class="text-tertiary text-sm">One click to copy any prompt. Paste it into your AI.</p>
+      </div>
+      <div class="text-center">
+        <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl font-bold text-emerald-500">4</div>
+        <h3 class="font-semibold mb-2">Get Results</h3>
+        <p class="text-tertiary text-sm">Watch your AI output quality skyrocket.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Demo -->
+  <section id="demo" class="py-20 px-6 bg-surface-raised border-y border-default" aria-labelledby="demo-heading">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 id="demo-heading" class="text-3xl font-bold mb-4">Try Before You Buy</h2>
+        <p class="text-tertiary">3 free prompts unlocked. Subscribe for the full library.</p>
+      </div>
+      <div class="bg-surface border border-default rounded-2xl overflow-hidden shadow-sm">
+        <div class="flex border-b border-default overflow-x-auto" role="tablist" aria-label="Prompt categories">
+          <button onclick="switchTab('writing')" id="tab-writing" role="tab" aria-selected="true" aria-controls="prompt-container" class="px-6 py-4 text-sm font-medium border-b-2 border-cyan-500 text-primary whitespace-nowrap">Writing</button>
+          <button onclick="switchTab('image')" id="tab-image" role="tab" aria-selected="false" aria-controls="prompt-container" class="px-6 py-4 text-sm font-medium border-b-2 border-transparent text-tertiary hover:text-primary whitespace-nowrap">Image Gen</button>
+          <button onclick="switchTab('coding')" id="tab-coding" role="tab" aria-selected="false" aria-controls="prompt-container" class="px-6 py-4 text-sm font-medium border-b-2 border-transparent text-tertiary hover:text-primary whitespace-nowrap">Coding</button>
+          <button onclick="switchTab('business')" id="tab-business" role="tab" aria-selected="false" aria-controls="prompt-container" class="px-6 py-4 text-sm font-medium border-b-2 border-transparent text-tertiary hover:text-primary whitespace-nowrap">Business</button>
+        </div>
+        <div id="prompt-container" class="p-6 space-y-4" role="tabpanel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 px-6 max-w-6xl mx-auto" aria-labelledby="testimonials-heading">
+    <div class="text-center mb-16">
+      <h2 id="testimonials-heading" class="text-3xl font-bold mb-4">Loved by Creators</h2>
+      <p class="text-tertiary max-w-xl mx-auto">Join thousands of AI power users who save hours every week.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-surface-raised border border-default rounded-2xl p-6">
+        <div class="flex items-center gap-1 text-amber-500 text-sm mb-3" aria-label="5 stars">★★★★★</div>
+        <p class="text-secondary text-sm leading-relaxed mb-4">"PromptVault saved me hours of trial and error. The Midjourney prompts alone are worth 10x the subscription."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm" aria-hidden="true">SK</div>
+          <div><div class="text-sm font-semibold">Sarah K.</div><div class="text-xs text-tertiary">AI Content Creator</div></div>
+        </div>
+      </div>
+      <div class="bg-surface-raised border border-default rounded-2xl p-6">
+        <div class="flex items-center gap-1 text-amber-500 text-sm mb-3" aria-label="5 stars">★★★★★</div>
+        <p class="text-secondary text-sm leading-relaxed mb-4">"I've tripled my coding output using the system design prompts. My team now uses PromptVault daily."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm" aria-hidden="true">MR</div>
+          <div><div class="text-sm font-semibold">Marcus R.</div><div class="text-xs text-tertiary">Senior Developer</div></div>
+        </div>
+      </div>
+      <div class="bg-surface-raised border border-default rounded-2xl p-6">
+        <div class="flex items-center gap-1 text-amber-500 text-sm mb-3" aria-label="5 stars">★★★★★</div>
+        <p class="text-secondary text-sm leading-relaxed mb-4">"The business strategy prompts helped me land 3 new clients last month. Best $7 I spend every month."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-sm" aria-hidden="true">JL</div>
+          <div><div class="text-sm font-semibold">Jessica L.</div><div class="text-xs text-tertiary">Marketing Consultant</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 px-6 max-w-5xl mx-auto" aria-labelledby="pricing-heading">
+    <div class="text-center mb-12">
+      <h2 id="pricing-heading" class="text-3xl font-bold mb-4">Simple Pricing</h2>
+      <p class="text-tertiary">Cancel anytime. No questions asked.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <div class="bg-surface border border-default rounded-2xl p-8 hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mb-2">Monthly</h3>
+        <p class="text-tertiary text-sm mb-6">Full flexibility. Perfect for trying it out.</p>
+        <div class="mb-6"><span class="text-4xl font-bold">$12</span><span class="text-tertiary">/mo</span></div>
+        <ul class="space-y-3 text-sm text-tertiary mb-8">
+          <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Unlimited prompt access</li>
+          <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Weekly new drops</li>
+          <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Save favorites</li>
+          <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Discord community</li>
+        </ul>
+        <button onclick="openCheckout('monthly')" class="w-full py-3 border-2 border-cyan-500 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition">Choose Monthly</button>
+      </div>
+      <div class="bg-gradient-to-br from-cyan-950 to-blue-950 border border-cyan-500/30 rounded-2xl p-8 relative shadow-xl shadow-cyan-500/10">
+        <div class="absolute -top-3 right-6 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">SAVE 40%</div>
+        <h3 class="text-lg font-semibold mb-2">Yearly</h3>
+        <p class="text-white/60 text-sm mb-6">Best value. Most creators choose this.</p>
+        <div class="mb-6">
+          <span class="text-4xl font-bold">$7</span><span class="text-white/60">/mo</span>
+          <div class="text-sm text-white/40 line-through mt-1">$144 $84/year</div>
+        </div>
+        <ul class="space-y-3 text-sm text-white/70 mb-8">
+          <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Everything in Monthly</li>
+          <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Early access to new prompts</li>
+          <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Download as PDF/Notion</li>
+          <li class="flex items-center gap-3"><svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Priority support</li>
+        </ul>
+        <button onclick="openCheckout('yearly')" class="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold hover:shadow-lg transition">Start Free Trial</button>
+      </div>
+    </div>
+    <p class="text-center text-xs text-tertiary mt-6">7-day free trial. No credit card required to start.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 px-6 max-w-3xl mx-auto" aria-labelledby="faq-heading">
+    <div class="text-center mb-12">
+      <h2 id="faq-heading" class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+    </div>
+    <div class="space-y-4">
+      <details class="bg-surface-raised border border-default rounded-xl p-5 group cursor-pointer">
+        <summary class="font-semibold text-primary flex items-center justify-between list-none">
+          How does the free trial work?
+          <svg class="w-5 h-5 text-tertiary group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-sm text-tertiary leading-relaxed">You get 7 days of full access to all 10,000+ prompts — no credit card required. If you love it, pick a plan. If not, cancel anytime during the trial with zero charges.</p>
+      </details>
+      <details class="bg-surface-raised border border-default rounded-xl p-5 group cursor-pointer">
+        <summary class="font-semibold text-primary flex items-center justify-between list-none">
+          What AI tools are the prompts for?
+          <svg class="w-5 h-5 text-tertiary group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-sm text-tertiary leading-relaxed">Our library covers ChatGPT (all versions), Claude, Midjourney, DALL·E, Stable Diffusion, GitHub Copilot, Gemini, Perplexity, and more. We add prompts for new models as they launch.</p>
+      </details>
+      <details class="bg-surface-raised border border-default rounded-xl p-5 group cursor-pointer">
+        <summary class="font-semibold text-primary flex items-center justify-between list-none">
+          Can I cancel anytime?
+          <svg class="w-5 h-5 text-tertiary group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-sm text-tertiary leading-relaxed">Absolutely. Cancel with one click from your account dashboard. No hoops, no retention calls. You'll keep access until the end of your billing period.</p>
+      </details>
+      <details class="bg-surface-raised border border-default rounded-xl p-5 group cursor-pointer">
+        <summary class="font-semibold text-primary flex items-center justify-between list-none">
+          How often are new prompts added?
+          <svg class="w-5 h-5 text-tertiary group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-sm text-tertiary leading-relaxed">We release a fresh batch of 50-200 prompts every single week. Our prompt engineers stay on top of AI trends so you always have the latest, most effective prompts.</p>
+      </details>
+      <details class="bg-surface-raised border border-default rounded-xl p-5 group cursor-pointer">
+        <summary class="font-semibold text-primary flex items-center justify-between list-none">
+          Is there a refund policy?
+          <svg class="w-5 h-5 text-tertiary group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <p class="mt-3 text-sm text-tertiary leading-relaxed">Yes. If you're not satisfied within the first 30 days of a paid subscription, we'll give you a full refund — no questions asked.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6 bg-surface-raised border-t border-default">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Level Up Your AI Game?</h2>
+      <p class="text-tertiary mb-8">Join thousands of creators, developers, and marketers who save hours every day with PromptVault.</p>
+      <button onclick="openCheckout('yearly')" class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold px-10 py-4 rounded-xl hover:shadow-xl hover:shadow-cyan-500/20 transition transform hover:-translate-y-0.5 text-lg">
+        Start Free Trial — No Credit Card Required
+      </button>
+    </div>
+  </section>
+
+  <!-- Checkout Modal -->
+  <div id="checkoutModal" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeCheckout()"></div>
+    <div class="absolute inset-0 flex items-center justify-center p-4">
+      <div class="bg-surface border border-default rounded-2xl shadow-2xl w-full max-w-md overflow-hidden animate-fadeIn">
+        <div class="bg-gradient-to-r from-cyan-500 to-blue-600 p-6 text-white">
+          <div class="flex items-center justify-between">
+            <h3 id="checkout-title" class="text-xl font-bold">Complete Your Subscription</h3>
+            <button onclick="closeCheckout()" class="text-white/70 hover:text-white" aria-label="Close checkout">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
+          <p class="text-white/80 text-sm mt-1">You're seconds away from 10,000+ prompts</p>
+        </div>
+        <div class="p-6 border-b border-default">
+          <div class="flex items-center justify-between mb-2"><span class="text-tertiary text-sm">Plan</span><span class="font-semibold text-sm" id="planName">Pro Yearly</span></div>
+          <div class="flex items-center justify-between mb-2"><span class="text-tertiary text-sm">Billing</span><span class="font-semibold text-sm" id="planBilling">$84/year</span></div>
+          <div class="flex items-center justify-between pt-3 border-t border-default mt-3"><span class="font-semibold">Total today</span><span class="text-2xl font-bold text-cyan-600" id="planTotal">$0.00</span></div>
+          <div class="text-xs text-emerald-600 mt-1 font-medium">7-day free trial — cancel anytime</div>
+        </div>
+        <form id="checkoutForm" class="p-6 space-y-4" onsubmit="processPayment(event)" novalidate>
+          <div>
+            <label for="email" class="text-sm font-medium mb-1.5 block">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" class="w-full px-4 py-2.5 border border-default rounded-lg bg-surface text-sm">
+            <p class="text-red-400 text-xs mt-1 hidden" id="emailError">Please enter a valid email address.</p>
+          </div>
+          <div>
+            <label for="cardNumber" class="text-sm font-medium mb-1.5 block">Card Number</label>
+            <div class="relative">
+              <input type="text" id="cardNumber" name="cardNumber" placeholder="4242 4242 4242 4242" required autocomplete="cc-number" maxlength="19" class="w-full px-4 py-2.5 border border-default rounded-lg bg-surface text-sm pl-10">
+              <svg class="w-5 h-5 text-tertiary absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+            </div>
+            <p class="text-red-400 text-xs mt-1 hidden" id="cardError">Please enter a valid card number.</p>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label for="expiry" class="text-sm font-medium mb-1.5 block">Expiry</label>
+              <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required autocomplete="cc-exp" maxlength="5" class="w-full px-4 py-2.5 border border-default rounded-lg bg-surface text-sm">
+              <p class="text-red-400 text-xs mt-1 hidden" id="expiryError">Invalid date.</p>
+            </div>
+            <div>
+              <label for="cvc" class="text-sm font-medium mb-1.5 block">CVC</label>
+              <input type="text" id="cvc" name="cvc" placeholder="123" required autocomplete="cc-csc" maxlength="4" class="w-full px-4 py-2.5 border border-default rounded-lg bg-surface text-sm">
+              <p class="text-red-400 text-xs mt-1 hidden" id="cvcError">Invalid CVC.</p>
+            </div>
+          </div>
+          <button type="submit" id="payBtn" class="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:shadow-lg transition flex items-center justify-center gap-2">
+            <span>Start Free Trial</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+          <div class="flex items-center justify-center gap-2 text-xs text-tertiary">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            Secured by Stripe 256-bit encryption
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Toast -->
+  <div id="successToast" class="fixed bottom-6 right-6 z-[110] hidden" role="alert" aria-live="polite">
+    <div class="bg-emerald-500 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 animate-slideUp">
+      <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center" aria-hidden="true">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <div>
+        <div class="font-semibold">Welcome to Pro!</div>
+        <div class="text-sm text-white/80">Your 7-day trial has started.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="border-t border-default py-12 px-6 text-center text-tertiary text-sm">
+    <p>&copy; 2026 PromptVault. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Prompt data by category
+    const promptData = {
+      writing: [
+        { free: true, title: "Viral Twitter Thread Hook", model: "ChatGPT", rating: "4.9", uses: "2.3k", text: "\"Write 5 attention-grabbing hooks for a Twitter thread about [TOPIC]. Each hook should create curiosity gap and promise actionable value. Include one that starts with a controversial take, one with a surprising stat, and one that tells a mini-story.\"" },
+        { free: true, title: "SEO Blog Post Outline", model: "Claude", rating: "4.8", uses: "1.9k", text: "\"Create a comprehensive blog post outline for '[KEYWORD]' targeting [AUDIENCE]. Include H2s and H3s. Each section should have a clear search intent. Add suggested word count and internal linking opportunities.\"" },
+        { free: false, title: "Email Welcome Sequence", model: "ChatGPT", rating: "4.9", uses: "3.1k", text: "" },
+        { free: false, title: "YouTube Script Framework", model: "Claude", rating: "4.7", uses: "2.5k", text: "" }
+      ],
+      image: [
+        { free: true, title: "Midjourney Product Photo", model: "Midjourney", rating: "4.8", uses: "1.8k", text: "\"Professional product photography of [PRODUCT] on a minimalist marble surface, soft studio lighting, 85mm lens, shallow depth of field, cinematic color grading, 8k resolution --ar 4:5 --style raw\"" },
+        { free: true, title: "Logo Design Concept", model: "DALL·E", rating: "4.7", uses: "1.2k", text: "\"Minimalist logo design for a [INDUSTRY] company called [NAME]. Vector style, flat design, negative space technique. Clean lines, modern aesthetic. White background. Professional and memorable.\"" },
+        { free: false, title: "UI/UX Mockup Generator", model: "Midjourney", rating: "4.9", uses: "2.7k", text: "" },
+        { free: false, title: "Character Design Sheet", model: "Stable Diffusion", rating: "4.6", uses: "1.4k", text: "" }
+      ],
+      coding: [
+        { free: true, title: "React Component Generator", model: "ChatGPT", rating: "4.9", uses: "4.2k", text: "\"Create a React functional component for [FEATURE] using TypeScript and Tailwind CSS. Include props interface, error handling, loading state, and accessibility attributes. Follow the container/presentational pattern.\"" },
+        { free: true, title: "SQL Query Optimizer", model: "Claude", rating: "4.8", uses: "2.1k", text: "\"Analyze this SQL query for performance: [QUERY]. Suggest index recommendations, query rewriting, and execution plan improvements. Explain the bottleneck and the fix in plain English.\"" },
+        { free: false, title: "System Design Interview Prep", model: "ChatGPT", rating: "4.9", uses: "5.3k", text: "" },
+        { free: false, title: "API Documentation Writer", model: "Claude", rating: "4.7", uses: "1.6k", text: "" }
+      ],
+      business: [
+        { free: true, title: "SaaS Pricing Strategy", model: "ChatGPT", rating: "4.8", uses: "2.9k", text: "\"Analyze the pricing strategy for [SAAS_PRODUCT]. Compare with top 3 competitors. Suggest optimal tier structure, feature gating, and psychological pricing tactics. Include a recommended pricing page layout.\"" },
+        { free: true, title: "Investor Pitch Deck Outline", model: "Claude", rating: "4.9", uses: "3.4k", text: "\"Create a 12-slide pitch deck outline for [STARTUP] raising [ROUND]. For each slide: key message, suggested visuals, data to include, and common investor questions to preemptively answer.\"" },
+        { free: false, title: "Cold Outreach Email Templates", model: "ChatGPT", rating: "4.7", uses: "2.8k", text: "" },
+        { free: false, title: "OKR Planning Framework", model: "Claude", rating: "4.8", uses: "1.9k", text: "" }
+      ]
+    };
+
+    let currentTab = 'writing';
+
+    function renderPrompts(tab) {
+      const container = document.getElementById('prompt-container');
+      const prompts = promptData[tab];
+      container.innerHTML = prompts.map((p, i) => {
+        if (p.free) {
+          return '<div class="border border-default rounded-xl p-5 hover:border-cyan-500/30 transition animate-fadeIn">' +
+            '<div class="flex items-start justify-between mb-3">' +
+              '<div class="flex items-center gap-3">' +
+                '<span class="bg-emerald-500/10 text-emerald-600 text-xs font-bold px-2 py-1 rounded">FREE</span>' +
+                '<h4 class="font-semibold">' + p.title + '</h4>' +
+              '</div>' +
+              '<span class="text-xs text-tertiary flex-shrink-0 ml-2">' + p.model + '</span>' +
+            '</div>' +
+            '<p class="text-sm text-tertiary mb-4 line-clamp-2">' + p.text + '</p>' +
+            '<div class="flex items-center justify-between">' +
+              '<div class="flex items-center gap-1 text-xs text-amber-500">★★★★★ <span class="text-tertiary ml-1">' + p.rating + ' (' + p.uses + ' uses)</span></div>' +
+              '<button onclick="copyPromptText(this, \'' + escapeHtml(p.text) + '\')" class="text-sm text-cyan-600 font-medium hover:text-cyan-700 flex items-center gap-1">' +
+                '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>' +
+                'Copy' +
+              '</button>' +
+            '</div>' +
+          '</div>';
+        } else {
+          return '<div class="border border-default rounded-xl p-5 relative overflow-hidden bg-surface-raised/50">' +
+            '<div class="absolute inset-0 bg-surface/60 backdrop-blur-[1px] flex items-center justify-center z-10">' +
+              '<button onclick="openCheckout(\'pro\')" class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2.5 rounded-lg font-medium shadow-lg hover:shadow-xl transition flex items-center gap-2">' +
+                '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>' +
+                'Unlock 9,997+ More' +
+              '</button>' +
+            '</div>' +
+            '<div class="flex items-start justify-between mb-3 opacity-40">' +
+              '<div class="flex items-center gap-3">' +
+                '<span class="bg-amber-500/10 text-amber-600 text-xs font-bold px-2 py-1 rounded">PRO</span>' +
+                '<h4 class="font-semibold">' + p.title + '</h4>' +
+              '</div>' +
+              '<span class="text-xs text-tertiary flex-shrink-0 ml-2">' + p.model + '</span>' +
+            '</div>' +
+            '<p class="text-sm text-tertiary mb-4 line-clamp-2 opacity-40">[Premium prompt — subscribe to unlock]</p>' +
+          '</div>';
+        }
+      }).join('');
+    }
+
+    function escapeHtml(text) {
+      return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    }
+
+    function switchTab(tab) {
+      currentTab = tab;
+      ['writing','image','coding','business'].forEach(t => {
+        const btn = document.getElementById('tab-' + t);
+        if (t === tab) {
+          btn.classList.add('border-cyan-500','text-primary');
+          btn.classList.remove('border-transparent','text-tertiary');
+          btn.setAttribute('aria-selected', 'true');
+        } else {
+          btn.classList.remove('border-cyan-500','text-primary');
+          btn.classList.add('border-transparent','text-tertiary');
+          btn.setAttribute('aria-selected', 'false');
+        }
+      });
+      renderPrompts(tab);
+    }
+
+    function copyPromptText(btn, text) {
+      const original = btn.innerHTML;
+      const fallbackCopy = () => {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta);
+      };
+      const done = () => {
+        btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Copied!';
+        btn.classList.add('text-emerald-600');
+        btn.classList.remove('text-cyan-600');
+        setTimeout(() => {
+          btn.innerHTML = original;
+          btn.classList.remove('text-emerald-600');
+          btn.classList.add('text-cyan-600');
+        }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(() => { fallbackCopy(); done(); });
+      } else {
+        fallbackCopy(); done();
+      }
+    }
+
+    function scrollToDemo() {
+      document.getElementById('demo').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function openCheckout(plan) {
+      const modal = document.getElementById('checkoutModal');
+      const nameEl = document.getElementById('planName');
+      const billEl = document.getElementById('planBilling');
+      const totalEl = document.getElementById('planTotal');
+      if (plan === 'monthly') {
+        nameEl.textContent = 'Pro Monthly';
+        billEl.textContent = '$12/month';
+        totalEl.textContent = '$0.00';
+      } else {
+        nameEl.textContent = 'Pro Yearly';
+        billEl.textContent = '$84/year';
+        totalEl.textContent = '$0.00';
+      }
+      // Reset form
+      document.getElementById('checkoutForm').reset();
+      document.querySelectorAll('#checkoutForm p.text-red-400').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('#checkoutForm input').forEach(el => el.classList.remove('border-red-400'));
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('email').focus();
+    }
+
+    function closeCheckout() {
+      document.getElementById('checkoutModal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Card number formatting
+    document.addEventListener('DOMContentLoaded', function() {
+      renderPrompts('writing');
+
+      const cardInput = document.getElementById('cardNumber');
+      if (cardInput) {
+        cardInput.addEventListener('input', function(e) {
+          let val = e.target.value.replace(/\D/g, '');
+          val = val.substring(0, 16);
+          val = val.replace(/(\d{4})(?=\d)/g, '$1 ');
+          e.target.value = val;
+        });
+      }
+
+      const expiryInput = document.getElementById('expiry');
+      if (expiryInput) {
+        expiryInput.addEventListener('input', function(e) {
+          let val = e.target.value.replace(/\D/g, '');
+          if (val.length >= 2) {
+            val = val.substring(0, 2) + '/' + val.substring(2, 4);
+          }
+          e.target.value = val;
+        });
+      }
+
+      const cvcInput = document.getElementById('cvc');
+      if (cvcInput) {
+        cvcInput.addEventListener('input', function(e) {
+          e.target.value = e.target.value.replace(/\D/g, '').substring(0, 4);
+        });
+      }
+
+      // Close modal with Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeCheckout();
+      });
+    });
+
+    function processPayment(event) {
+      event.preventDefault();
+      let valid = true;
+
+      // Validate email
+      const email = document.getElementById('email');
+      const emailErr = document.getElementById('emailError');
+      if (!email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        emailErr.classList.remove('hidden');
+        email.classList.add('border-red-400');
+        valid = false;
+      } else {
+        emailErr.classList.add('hidden');
+        email.classList.remove('border-red-400');
+      }
+
+      // Validate card number
+      const card = document.getElementById('cardNumber');
+      const cardErr = document.getElementById('cardError');
+      const cardDigits = card.value.replace(/\s/g, '');
+      if (cardDigits.length < 13 || cardDigits.length > 19 || !/^\d+$/.test(cardDigits)) {
+        cardErr.classList.remove('hidden');
+        card.classList.add('border-red-400');
+        valid = false;
+      } else {
+        cardErr.classList.add('hidden');
+        card.classList.remove('border-red-400');
+      }
+
+      // Validate expiry
+      const expiry = document.getElementById('expiry');
+      const expiryErr = document.getElementById('expiryError');
+      const parts = expiry.value.split('/');
+      if (parts.length !== 2 || !/^\d{2}$/.test(parts[0]) || !/^\d{2}$/.test(parts[1])) {
+        expiryErr.classList.remove('hidden');
+        expiry.classList.add('border-red-400');
+        valid = false;
+      } else {
+        const month = parseInt(parts[0]);
+        const year = parseInt('20' + parts[1]);
+        const now = new Date();
+        if (month < 1 || month > 12 || year < now.getFullYear() || (year === now.getFullYear() && month < now.getMonth() + 1)) {
+          expiryErr.classList.remove('hidden');
+          expiry.classList.add('border-red-400');
+          valid = false;
+        } else {
+          expiryErr.classList.add('hidden');
+          expiry.classList.remove('border-red-400');
+        }
+      }
+
+      // Validate CVC
+      const cvc = document.getElementById('cvc');
+      const cvcErr = document.getElementById('cvcError');
+      if (cvc.value.length < 3 || cvc.value.length > 4 || !/^\d+$/.test(cvc.value)) {
+        cvcErr.classList.remove('hidden');
+        cvc.classList.add('border-red-400');
+        valid = false;
+      } else {
+        cvcErr.classList.add('hidden');
+        cvc.classList.remove('border-red-400');
+      }
+
+      if (!valid) return;
+
+      // Show processing
+      const btn = document.getElementById('payBtn');
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = '<svg class="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Processing...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        closeCheckout();
+        btn.innerHTML = originalHTML;
+        btn.disabled = false;
+
+        const toast = document.getElementById('successToast');
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 4000);
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
